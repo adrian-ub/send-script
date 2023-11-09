@@ -1,0 +1,14 @@
+---
+import { Tabs, TabItem } from "@astrojs/starlight/components";
+import { generateContent } from "./generate-content";
+
+const scriptRendered = await Astro.slots.render("default");
+
+const { whatsappContent } = generateContent({ scriptRendered });
+---
+
+<Tabs>
+  <TabItem label="Whatsapp Web">
+    <article set:html={whatsappContent} />
+  </TabItem>
+</Tabs>
