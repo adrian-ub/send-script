@@ -15,9 +15,10 @@ export default defineConfig({
         baseUrl: "https://github.com/adrian-ub/send-script/edit/main",
       },
       locales: {
-        en: {
-          label: "English",
-          lang: "en",
+        root: { label: "English", lang: "en" },
+        es: {
+          label: "Español",
+          lang: "es",
         },
       },
       social: {
@@ -26,10 +27,16 @@ export default defineConfig({
       sidebar: [
         {
           label: "Getting Started",
+          translations: {
+            es: "Empezando",
+          },
           link: "/getting-started",
         },
         {
           label: "Movies",
+          translations: {
+            es: "Películas",
+          },
           autogenerate: {
             directory: "movies",
           },
